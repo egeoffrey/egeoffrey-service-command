@@ -50,7 +50,7 @@ class Command(Service):
             # send the response back
             self.send(message)
         elif message.command == "OUT":
-            if not self.is_valid_configuration(["command"], message.get_data(), False): return
+            if not self.is_valid_configuration(["command"], message.get_data()): return
             command = message.get("command")
             self.run_command(command)
 
