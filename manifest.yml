@@ -1,5 +1,5 @@
 package: myhouse-service-command
-release: 1
+revision: 1
 version: development
 git: myhouse-project/myhouse-service-command
 modules:
