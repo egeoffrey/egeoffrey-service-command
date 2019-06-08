@@ -17,9 +17,9 @@ import json
 import datetime
 import time
  
-from sdk.module.service import Service
+from sdk.python.module.service import Service
 
-import sdk.utils.command
+import sdk.python.utils.command
 
 class Command(Service):
     # What to do when initializing
@@ -36,7 +36,7 @@ class Command(Service):
 
     def run_command(self, command):
         self.log_debug("Executing command "+command)
-        return sdk.utils.command.run(command)
+        return sdk.python.utils.command.run(command)
 
     # What to do when receiving a request for this module        
     def on_message(self, message):
