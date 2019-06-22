@@ -1,6 +1,9 @@
 package: myhouse-service-command
-revision: 2
+revision: 3
 version: development
-git: myhouse-project/myhouse-service-command
+github: myhouse-project/myhouse-service-command
+dockerhub: myhouse-project/myhouse-service-command
+description: Run system commands, useful to e.g. interact with a utility which communicates with a sensor
+tags: service command os
 modules:
   - service/command
