@@ -1,9 +1,18 @@
+manifest_schema: 1
 package: myhouse-service-command
-revision: 4
+revision: 5
 version: development
 github: myhouse-project/myhouse-service-command
 dockerhub: myhouseproject/myhouse-service-command
 description: Run system commands, useful to e.g. interact with a utility which communicates with a sensor
 tags: service command os
 modules:
-  - service/command
+  - service/command:
+      description: Run system commands
+      service_configuration: 
+        active:
+          - name: command
+            description: Command to run
+            format: string
+            placeholder: uptime
+            required: true
