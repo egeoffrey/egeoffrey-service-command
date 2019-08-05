@@ -3,6 +3,7 @@ description: Run system commands, useful to e.g. interact with a utility which c
   with a sensor
 dockerhub: myhouseproject/myhouse-service-command
 github: myhouse-project/myhouse-service-command
+icon: terminal
 manifest_schema: 2
 modules:
 - service/command:
@@ -15,6 +16,6 @@ modules:
         placeholder: uptime
         required: true
 package: myhouse-service-command
-revision: 6
+revision: 7
 tags: service command os
 version: 1.0
