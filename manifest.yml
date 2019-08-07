@@ -1,8 +1,8 @@
 branch: development
 description: Run system commands, useful to e.g. interact with a utility which communicates
   with a sensor
-dockerhub: myhouseproject/myhouse-service-command
-github: myhouse-project/myhouse-service-command
+dockerhub: egeoffrey/egeoffrey-service-command
+github: egeoffrey/egeoffrey-service-command
 icon: terminal
 manifest_schema: 2
 modules:
@@ -15,7 +15,7 @@ modules:
         name: command
         placeholder: uptime
         required: true
-package: myhouse-service-command
-revision: 7
+package: egeoffrey-service-command
+revision: 8
 tags: service command os
 version: 1.0
