@@ -15,7 +15,13 @@ modules:
         name: command
         placeholder: uptime
         required: true
+      actuator:
+      - description: Command to run
+        format: string
+        name: command
+        placeholder: reboot
+        required: true
 package: egeoffrey-service-command
-revision: 8
+revision: 9
 tags: service command os
 version: 1.0
