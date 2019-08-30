@@ -40,6 +40,7 @@ class Command(Service):
 
     # What to do when receiving a request for this module        
     def on_message(self, message):
+        # poll the sensor
         if message.command == "IN":
             if not self.is_valid_configuration(["command"], message.get_data()): return
             sensor_id = message.args
@@ -49,11 +50,18 @@ class Command(Service):
             message.set("value", self.run_command(command))
             # send the response back
             self.send(message)
+        # run as an actuator
         elif message.command == "OUT":
             if not self.is_valid_configuration(["command"], message.get_data()): return
             command = message.get("command")
             self.run_command(command)
-
+        
     # What to do when receiving a new/updated configuration for this module
     def on_configuration(self,message):
-        pass
+        # register/unregister the sensor
+        if message.args.startswith("sensors/"):
+            if message.is_null: 
+                sensor_id = self.unregister_sensor(message)
+            else: 
+                sensor_id = self.register_sensor(message)
+                

@@ -22,6 +22,6 @@ modules:
         placeholder: reboot
         required: true
 package: egeoffrey-service-command
-revision: 9
+revision: 10
 tags: service command os
 version: 1.0
