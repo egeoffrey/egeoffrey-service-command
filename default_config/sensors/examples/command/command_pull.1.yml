@@ -6,7 +6,7 @@ retain: history
 service:
   configuration:
     command: cat /tmp/command_out
-  mode: active
+  mode: pull
   name: command
   schedule:
     minutes: 10

@@ -9,19 +9,19 @@ modules:
 - service/command:
     description: Run system commands
     service_configuration:
-      active:
-      - description: Command to run
-        format: string
-        name: command
-        placeholder: uptime
-        required: true
       actuator:
       - description: Command to run
         format: string
         name: command
         placeholder: reboot
         required: true
+      pull:
+      - description: Command to run
+        format: string
+        name: command
+        placeholder: uptime
+        required: true
 package: egeoffrey-service-command
-revision: 10
+revision: 11
 tags: service command os
 version: 1.0
