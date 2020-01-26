@@ -61,4 +61,4 @@ service command os
 
 ## Version
 
-The version of this egeoffrey-service-command is 1.0-14 on the master branch.
+The version of this egeoffrey-service-command is 1.0-15 on the master branch.
